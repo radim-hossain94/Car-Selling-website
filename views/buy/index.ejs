@@ -1,0 +1,34 @@
+<html>
+
+<head>
+	<title>Validation</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+
+<body>
+	<script>
+
+		function checkcrd(form){
+
+	var a = document.forms["myform"]["myfield1"].value;
+
+	var check = /^(?:3[47][0-9]{13})$/;
+
+	if(!a.match(check)){
+		alert("Not a valid Amercican Express credit card number!");
+    return false;
+	}
+}
+
+</script>
+
+	<form id="myform" onsubmit="return checkcrd(this);" method="post">
+		<input type="hidden" name="id" value="<%=id %>" />
+		Card number: <input type="text" id="myfield1" name="fld1">
+
+		<input type="submit" id="sub" name="sub">
+	</form>
+
+</body>
+
+</html>

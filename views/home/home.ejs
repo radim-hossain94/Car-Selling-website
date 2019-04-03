@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title img width="150" height="45" src="/contents/image/black.jpg">Car Bazar</title>
+	<meta name="description" content="Hello World">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="/Contents/bower_components/font-awesome/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+
+	<header>
+
+		<div class="navbar navbar-light" style="background-color: #e3f2fd;">
+
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="" class="navbar-brand"><img width="150" height="45" src="/contents/image/black.jpg"></a>
+				</div>
+				<div class="navbar-form navbar-right" id="example">
+					<ul class="nav navbar-nav">
+						<!--	<li><a href="">Auction</a></li>-->
+						<li><a href="/registration">Registration</a></li>
+						<li><a href="/login">Log In</a></li>
+
+
+					</ul>
+					<!--
+					<a href="" class="btn btn-primary navbar-btn">A button</a>
+
+					<form action="" class="navbar-form navbar-right" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="search this out">
+						</div>
+						<button type="submit" class="btn btn-primary">Submit</button>
+					</form>
+				-->
+				</div>
+
+			</div>
+		</div>
+		<div class="jumbotron">
+			<div class="container">
+				<style>
+					* {
+						box-sizing: border-box;
+					}
+
+					body {
+						font-family: Verdana, sans-serif;
+					}
+
+					.mySlides {
+						display: none;
+					}
+
+					img {
+						vertical-align: middle;
+					}
+
+					/* Slideshow container */
+					.slideshow-container {
+						max-width: 1000px;
+						position: relative;
+						margin: auto;
+					}
+
+					/* Caption text */
+					.text {
+						color: #f2f2f2;
+						font-size: 15px;
+						padding: 8px 12px;
+						position: absolute;
+						bottom: 8px;
+						width: 100%;
+						text-align: center;
+					}
+
+					/* Number text (1/3 etc) */
+					.numbertext {
+						color: #f2f2f2;
+						font-size: 12px;
+						padding: 8px 12px;
+						position: absolute;
+						top: 0;
+					}
+
+					/* The dots/bullets/indicators */
+					.dot {
+						height: 15px;
+						width: 15px;
+						margin: 0 2px;
+						background-color: #bbb;
+						border-radius: 50%;
+						display: inline-block;
+						transition: background-color 0.6s ease;
+					}
+
+					.active {
+						background-color: #717171;
+					}
+
+					/* Fading animation */
+					.fade {
+						-webkit-animation-name: fade;
+						-webkit-animation-duration: 1.5s;
+						animation-name: fade;
+						animation-duration: 1.5s;
+					}
+
+					@-webkit-keyframes fade {
+						from {
+							opacity: .4
+						}
+
+						to {
+							opacity: 1
+						}
+					}
+
+					@keyframes fade {
+						from {
+							opacity: .4
+						}
+
+						to {
+							opacity: 1
+						}
+					}
+
+					/* On smaller screens, decrease text size */
+					@media only screen and (max-width: 300px) {
+						.text {
+							font-size: 11px
+						}
+					}
+				</style>
+				</head>
+
+				<body>
+
+
+
+					<div class="slideshow-container">
+
+						<div class="mySlides fade">
+							<div class="numbertext">1 / 6</div>
+							<img src="/contents/image/car1.jpg" style="width:65% ">
+
+						</div>
+
+						<div class="mySlides fade">
+							<div class="numbertext">2 / 6</div>
+							<img src="/contents/image/car2.jpg" style="width:65% ">
+
+						</div>
+
+						<div class="mySlides fade">
+							<div class="numbertext">3 / 6</div>
+							<img src="/contents/image/car3.png" style="width:65% ">
+
+						</div>
+						<div class="mySlides fade">
+							<div class="numbertext">4/ 6</div>
+							<img src="/contents/image/car4.jpg" style="width:65% ">
+
+						</div>
+						<div class="mySlides fade">
+							<div class="numbertext">5 / 6</div>
+							<img src="/contents/image/car5.jpg" style="width:65%">
+
+						</div>
+						<div class="mySlides fade">
+							<div class="numbertext">6 / 6</div>
+							<img src="/contents/image/car6.jpg" style="width:65% ">
+
+						</div>
+
+					</div>
+					<br>
+
+					<div style="text-align:center">
+						<span class="dot"></span>
+						<span class="dot"></span>
+						<span class="dot"></span>
+						<span class="dot"></span>
+						<span class="dot"></span>
+						<span class="dot"></span>
+					</div>
+
+					<script>
+						var slideIndex = 0;
+						showSlides();
+
+						function showSlides() {
+							var i;
+							var slides = document.getElementsByClassName("mySlides");
+							var dots = document.getElementsByClassName("dot");
+							for (i = 0; i < slides.length; i++) {
+								slides[i].style.display = "none";
+							}
+							slideIndex++;
+							if (slideIndex > slides.length) {
+								slideIndex = 1
+							}
+							for (i = 0; i < dots.length; i++) {
+								dots[i].className = dots[i].className.replace(" active", "");
+							}
+							slides[slideIndex - 1].style.display = "block";
+							dots[slideIndex - 1].className += " active";
+							setTimeout(showSlides, 2000); // Change image every 2 seconds
+						}
+					</script>
+
+
+
+			</div>
+		</div>
+	</header>
+
+
+
+
+	<footer>
+		<div class="container">
+			<hr>
+
+			<p>
+				<small><a href="http://facebook.com/askorama">Like me</a> On facebook</small></p>
+			<p> <small><a href="http://twitter.com/wiredwiki">Ask whatever </a> On Twitter</small></p>
+			<p> <small><a href="http://youtube.com/wiredwiki">Subscribe me</a> On Youtube</small>
+
+			</p>
+		</div> <!-- end container -->
+	</footer>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
